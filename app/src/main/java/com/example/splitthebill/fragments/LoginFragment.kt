@@ -8,15 +8,14 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.splitthebill.MainActivity
 import com.example.splitthebill.databinding.LoginFragmentLayoutBinding
-import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 
-class LoginFragment: Fragment() {
+class LoginFragment : Fragment() {
     private lateinit var binding: LoginFragmentLayoutBinding
     private lateinit var firebaseAuth: FirebaseAuth
-/*
-    var editTextEmail: TextInputEditText? = null
-    var editTextPassword: TextInputEditText? = null*/
+    /*
+        var editTextEmail: TextInputEditText? = null
+        var editTextPassword: TextInputEditText? = null*/
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,24 +32,23 @@ class LoginFragment: Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.notSingUp.setOnClickListener {
-            (activity as? MainActivity)?.addFragment(SingUpFragment())
+            (activity as? MainActivity)?.replaceFragment(SingUpFragment())
         }
 
         binding.lgBt.setOnClickListener {
-            val email = binding.email.editText.toString()
-            val password = binding.password.editText.toString()
+            val email = binding.emailET.text.toString()
+            val password = binding.passwordET.text.toString()
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
-
                 firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
                         (activity as? MainActivity)?.addFragment(ListFragment())
                     } else {
-                        //Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }
                 }
             } else {
-                //Toast.makeText(this, "Fields are empty ", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Fields are empty", Toast.LENGTH_SHORT).show()
 
             }
         }

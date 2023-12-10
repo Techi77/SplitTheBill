@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.splitthebill.MainActivity
 import com.example.splitthebill.databinding.SingUpFragmentLayoutBinding
@@ -31,7 +32,7 @@ class SingUpFragment: Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.alreadySingUp.setOnClickListener {
-            (activity as? MainActivity)?.addFragment(LoginFragment())
+            (activity as? MainActivity)?.replaceFragment(LoginFragment())
         }
         binding.button.setOnClickListener {
             val email = binding.emailEt.text.toString()
@@ -50,10 +51,10 @@ class SingUpFragment: Fragment() {
                         }
                     }
                 } else {
-                   // Toast.makeText(this, "Password is not matching", Toast.LENGTH_SHORT).show()
+                   Toast.makeText(context, "Password is not matching", Toast.LENGTH_SHORT).show()
                 }
             } else {
-               // Toast.makeText(this, "Empty Fields Are not Allowed !!", Toast.LENGTH_SHORT).show()
+               Toast.makeText(context, "Empty Fields Are not Allowed !!", Toast.LENGTH_SHORT).show()
 
             }
         }
