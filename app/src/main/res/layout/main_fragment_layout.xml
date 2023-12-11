@@ -3,38 +3,93 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@drawable/bg_main">
 
-    <TextView
-        android:id="@+id/welcome"
-        android:layout_width="wrap_content"
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/welcome"
-        android:textColor="@color/black"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/transparent"
+        android:title="@string/app_name"
+        android:titleTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/mainLoginBt"
+    <View
+        android:id="@+id/dialogBg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_dialog"
+
+        app:layout_constraintWidth_max="312dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pizza"
+        android:layout_marginTop="-24dp"
+        android:layout_marginBottom="-24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/loginBt"/>
+
+    <ImageView
+        android:id="@+id/pizza"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_pizza"
+        app:layout_constraintBottom_toTopOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="@+id/dialogBg"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/dialogBg"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login"
-        app:layout_constraintEnd_toEndOf="@+id/welcome"
-        app:layout_constraintStart_toStartOf="@+id/welcome"
-        app:layout_constraintTop_toBottomOf="@+id/welcome"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="16dp"
+        android:text="@string/shall_we_create"
+        android:textColor="@color/black_opacity_60"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/subtitle"
+        app:layout_constraintEnd_toEndOf="@+id/dialogBg"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/dialogBg"
+        app:layout_constraintTop_toBottomOf="@+id/pizza" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/your_profile"
+        android:textColor="@color/black_opacity_60"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/registrationBt"
+        app:layout_constraintEnd_toEndOf="@+id/dialogBg"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/dialogBg"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/mainRegistrationBt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/registration"
-        app:layout_constraintEnd_toEndOf="@+id/mainLoginBt"
-        app:layout_constraintStart_toStartOf="@+id/mainLoginBt"
-        app:layout_constraintTop_toBottomOf="@+id/mainLoginBt"
-        android:layout_marginTop="30dp"/>
+        android:id="@+id/registrationBt"
+        style="@style/OutlinedMaterialDialogButton"
+        android:text="@string/lets"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/loginBt"
+        app:layout_constraintEnd_toEndOf="@+id/dialogBg"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/dialogBg"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginBt"
+        style="@style/OutlinedMaterialDialogButton"
+        android:text="@string/I_have_an_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/dialogBg"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/dialogBg"
+        app:layout_constraintTop_toBottomOf="@+id/registrationBt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Split the bill</string>
-    <string name="shall_we_create">Shall we create</string>
-    <string name="your_profile">your profile</string>
-    <string name="lets">Let\'s!</string>
-    <string name="I_have_an_account">I have an account</string>
+    <string name="app_name">Разделим?</string>
+    <string name="shall_we_create">Создадим?</string>
+    <string name="your_profile">твой профиль</string>
+    <string name="lets">Давай!</string>
+    <string name="I_have_an_account">Аккаунт есть!</string>
 
 
 

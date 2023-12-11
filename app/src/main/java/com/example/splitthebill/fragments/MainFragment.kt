@@ -23,10 +23,10 @@ class MainFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.mainLoginBt.setOnClickListener {
+        binding.loginBt.setOnClickListener {
             (activity as? MainActivity)?.addFragment(LoginFragment())
         }
-        binding.mainRegistrationBt.setOnClickListener {
+        binding.registrationBt.setOnClickListener {
             (activity as? MainActivity)?.addFragment(SingUpFragment())
         }
     }
