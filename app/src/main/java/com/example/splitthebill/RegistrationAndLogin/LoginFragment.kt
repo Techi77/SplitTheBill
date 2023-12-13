@@ -1,4 +1,4 @@
-package com.example.splitthebill.fragments
+package com.example.splitthebill.RegistrationAndLogin
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.splitthebill.MainActivity
 import com.example.splitthebill.databinding.LoginFragmentLayoutBinding
+import com.example.splitthebill.StartPage.fragments.StartFragment
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginFragment : Fragment() {
@@ -42,7 +43,7 @@ class LoginFragment : Fragment() {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        (activity as? MainActivity)?.addFragment(ListFragment())
+                        (activity as? MainActivity)?.addFragment(StartFragment())
                     } else {
                         Toast.makeText(context, it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }

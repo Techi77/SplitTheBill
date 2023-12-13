@@ -1,4 +1,4 @@
-package com.example.splitthebill.fragments
+package com.example.splitthebill.StartPage.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.splitthebill.databinding.ListFragmentLayoutBinding
 
-class ListFragment: Fragment() {
+class StartFragment: Fragment() {
     private lateinit var binding: ListFragmentLayoutBinding
 
     override fun onCreateView(

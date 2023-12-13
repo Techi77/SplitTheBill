@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.splitthebill.fragments.LoginFragment"
+        android:name="com.example.splitthebill.RegistrationAndLogin.LoginFragment"
         android:label="MainFragment"
         tools:layout="@layout/login_fragment_layout"/>
 </navigation>
