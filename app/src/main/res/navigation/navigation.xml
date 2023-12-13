@@ -9,5 +9,5 @@
         android:id="@+id/mainFragment"
         android:name="com.example.splitthebill.RegistrationAndLogin.LoginFragment"
         android:label="MainFragment"
-        tools:layout="@layout/login_fragment_layout"/>
+        tools:layout="@layout/f_login"/>
 </navigation>

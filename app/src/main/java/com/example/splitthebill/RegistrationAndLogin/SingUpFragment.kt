@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.splitthebill.MainActivity
-import com.example.splitthebill.databinding.SingUpFragmentLayoutBinding
 import com.example.splitthebill.StartPage.fragments.StartFragment
+import com.example.splitthebill.databinding.FSignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class SingUpFragment: Fragment() {
-    private lateinit var binding: SingUpFragmentLayoutBinding
+    private lateinit var binding: FSignUpBinding
     private lateinit var firebaseAuth: FirebaseAuth
 /*
     var editTextEmail: TextInputEditText? = null
@@ -23,7 +23,7 @@ class SingUpFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = SingUpFragmentLayoutBinding.inflate(inflater, container, false)
+        binding = FSignUpBinding.inflate(inflater, container, false)
         return binding.root
     }
 

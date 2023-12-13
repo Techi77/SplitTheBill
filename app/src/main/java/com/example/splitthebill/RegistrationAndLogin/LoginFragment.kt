@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.splitthebill.MainActivity
-import com.example.splitthebill.databinding.LoginFragmentLayoutBinding
 import com.example.splitthebill.StartPage.fragments.StartFragment
+import com.example.splitthebill.databinding.FLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginFragment : Fragment() {
-    private lateinit var binding: LoginFragmentLayoutBinding
+    private lateinit var binding: FLoginBinding
     private lateinit var firebaseAuth: FirebaseAuth
     /*
         var editTextEmail: TextInputEditText? = null
@@ -23,7 +23,7 @@ class LoginFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = LoginFragmentLayoutBinding.inflate(inflater, container, false)
+        binding = FLoginBinding.inflate(inflater, container, false)
         return binding.root
     }
 

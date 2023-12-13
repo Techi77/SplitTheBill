@@ -4,15 +4,15 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import com.example.splitthebill.databinding.MainActivityLayoutBinding
+import com.example.splitthebill.databinding.FMainActivityBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: MainActivityLayoutBinding
+    private lateinit var binding: FMainActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = MainActivityLayoutBinding.inflate(layoutInflater)
+        binding = FMainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
 

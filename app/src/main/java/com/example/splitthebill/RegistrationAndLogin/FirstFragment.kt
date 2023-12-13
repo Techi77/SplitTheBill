@@ -6,17 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.splitthebill.MainActivity
-import com.example.splitthebill.databinding.MainFragmentLayoutBinding
+import com.example.splitthebill.databinding.FFirstPageBinding
 
 class FirstFragment: Fragment() {
-    private lateinit var binding: MainFragmentLayoutBinding
+    private lateinit var binding: FFirstPageBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = MainFragmentLayoutBinding.inflate(inflater, container, false)
+        binding = FFirstPageBinding.inflate(inflater, container, false)
         return binding.root
     }
 
