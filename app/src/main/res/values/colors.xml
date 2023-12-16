@@ -17,13 +17,18 @@
     <color name="white">#FFFFFFFF</color>
     <color name="white_opacity_60">#99FFFFFF</color>
 
+    <color name="main_blue">#2007FB</color>
+    <color name="main_blue_opacity_50">#802007FB</color>
+    <color name="main_blue_dark">#0789FA</color>
+    <color name="main_blue_dark_opacity_50">#800789FA</color>
+
 
 
 
     <color name="transparent">#00000000</color>
-    <color name="main_blue">#2007FB</color>
-    <color name="main_blue_dark">#0789FA</color>
     <color name="dialog_border">#4D1D2A38</color>
     <color name="dialog_border_dark">#4D6B99CC</color>
+    <color name="editTextColor">#1D2A384D</color>
+    <color name="editTextColor_dark">#1D98A2B3</color>
 
 </resources>
