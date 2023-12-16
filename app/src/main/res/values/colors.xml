@@ -11,6 +11,8 @@
     <color name="black">#FF000000</color>
     <color name="black_opacity_60">#99000000</color>
 
+    <color name="gray_800">#2F2F2F</color>
+
 
     <color name="white">#FFFFFFFF</color>
     <color name="white_opacity_60">#99FFFFFF</color>
@@ -20,6 +22,8 @@
 
     <color name="transparent">#00000000</color>
     <color name="main_blue">#2007FB</color>
+    <color name="main_blue_dark">#0789FA</color>
     <color name="dialog_border">#4D1D2A38</color>
+    <color name="dialog_border_dark">#4D6B99CC</color>
 
 </resources>

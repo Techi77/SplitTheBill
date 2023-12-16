@@ -2,4 +2,5 @@
 <resources>
 
     <style name="Theme.SplitTheBill" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+    <style name="Theme.SplitTheBill.DarkTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
 </resources>
