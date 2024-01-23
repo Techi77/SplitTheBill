@@ -12,7 +12,20 @@
           "package_name": "com.example.splitthebill"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "782263824448-521bv4klmhlml6q568bofsbv76udp084.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.splitthebill",
+            "certificate_hash": "000d5e36a6b431deea2058fec4e65672efc1309f"
+          }
+        },
+        {
+          "client_id": "782263824448-i056cfkcivhuh0m6n46l6md5t9ld9o1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCZ2q-ImA-BBBI4cgaHU5oxRzogHmBkcVQ"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782263824448-i056cfkcivhuh0m6n46l6md5t9ld9o1r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

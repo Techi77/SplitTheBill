@@ -1,4 +1,4 @@
-package com.example.splitthebill.StartPage.fragments
+package com.example.splitthebill.startPage.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

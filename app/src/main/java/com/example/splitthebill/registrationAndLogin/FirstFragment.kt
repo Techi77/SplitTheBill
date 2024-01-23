@@ -1,4 +1,4 @@
-package com.example.splitthebill.RegistrationAndLogin
+package com.example.splitthebill.registrationAndLogin
 
 import android.os.Bundle
 import android.view.LayoutInflater
