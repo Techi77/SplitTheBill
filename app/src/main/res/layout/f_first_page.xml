@@ -3,7 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_main">
+    android:background="?attr/bg_color">
+
+    <View
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -21,7 +31,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/bg_dialog"
-
         app:layout_constraintWidth_max="312dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/shall_we_create"
-        android:textColor="@color/black_opacity_60"
+        android:textColor="?attr/textColor"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/subtitle"
         app:layout_constraintEnd_toEndOf="@+id/dialogBg"
@@ -63,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/your_profile"
-        android:textColor="@color/black_opacity_60"
+        android:textColor="?attr/textColor"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/registrationBt"
         app:layout_constraintEnd_toEndOf="@+id/dialogBg"
