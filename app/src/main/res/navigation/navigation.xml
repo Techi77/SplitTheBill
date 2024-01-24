@@ -3,11 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/mainFragment">
-
+    app:startDestination="@id/firstFragment">
     <fragment
-        android:id="@+id/mainFragment"
+        android:id="@+id/firstFragment"
+        android:name="com.example.splitthebill.registrationAndLogin.FirstFragment"
+        android:label="FirstFragment"
+        tools:layout="@layout/f_first_page"> <!--for preview unavailable-->
+        <action
+            android:id="@+id/action_firstFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_singUpFragment"
+            app:destination="@id/singUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
         android:name="com.example.splitthebill.registrationAndLogin.LoginFragment"
-        android:label="MainFragment"
-        tools:layout="@layout/f_login"/>
+        android:label="LoginFragment"
+        tools:layout="@layout/f_login">
+        <action
+            android:id="@+id/action_loginFragment_to_startFragment3"
+            app:destination="@id/startFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_singUpFragment"
+            app:destination="@id/singUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singUpFragment"
+        android:name="com.example.splitthebill.registrationAndLogin.SingUpFragment"
+        android:label="SingUpFragment"
+        tools:layout="@layout/f_sign_up">
+        <action
+            android:id="@+id/action_singUpFragment_to_startFragment3"
+            app:destination="@id/startFragment" />
+        <action
+            android:id="@+id/action_singUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.splitthebill.startPage.fragments.StartFragment"
+        android:label="StartFragment"
+        tools:layout="@layout/f_start"/>
 </navigation>

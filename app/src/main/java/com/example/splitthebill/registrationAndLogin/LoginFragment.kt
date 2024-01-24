@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.splitthebill.MainActivity
 import com.example.splitthebill.R
 import com.example.splitthebill.databinding.FLoginBinding
@@ -41,7 +42,8 @@ class LoginFragment : Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.notSingUp.setOnClickListener {
-            (activity as? MainActivity)?.addFragment(SingUpFragment())
+            //(activity as? MainActivity)?.addFragment(SingUpFragment())
+            findNavController().navigate(R.id.singUpFragment)
         }
 
         binding.lgBt.setOnClickListener {
@@ -51,7 +53,8 @@ class LoginFragment : Fragment() {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        (activity as? MainActivity)?.addFragment(StartFragment())
+                        //(activity as? MainActivity)?.addFragment(StartFragment())
+                        findNavController().navigate(R.id.startFragment)
                     } else {
                         Toast.makeText(context, it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }
@@ -95,7 +98,8 @@ class LoginFragment : Fragment() {
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
                     //handle success
-                    (activity as? MainActivity)?.addFragment(StartFragment())
+                    //(activity as? MainActivity)?.addFragment(StartFragment())
+                    findNavController().navigate(R.id.startFragment)
                     Toast.makeText(context, "Nice", Toast.LENGTH_SHORT).show()
                 } else {
                     //handle error

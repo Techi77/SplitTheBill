@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.splitthebill.MainActivity
 import com.example.splitthebill.R
 import com.example.splitthebill.databinding.FSignUpBinding
@@ -41,7 +42,8 @@ class SingUpFragment: Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.alreadySingUp.setOnClickListener {
-            (activity as? MainActivity)?.addFragment(LoginFragment())
+            //(activity as? MainActivity)?.addFragment(LoginFragment())
+            findNavController().navigate(R.id.loginFragment)
         }
         binding.button.setOnClickListener {
             val email = binding.emailEt.text.toString()
@@ -53,7 +55,8 @@ class SingUpFragment: Fragment() {
 
                     firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                         if (it.isSuccessful) {
-                            (activity as? MainActivity)?.addFragment(StartFragment())
+                            //(activity as? MainActivity)?.addFragment(StartFragment())
+                            findNavController().navigate(R.id.startFragment)
                         } else {
                             //Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
 
@@ -101,7 +104,8 @@ class SingUpFragment: Fragment() {
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
                     //handle success
-                    (activity as? MainActivity)?.addFragment(StartFragment())
+                    //(activity as? MainActivity)?.addFragment(StartFragment())
+                    findNavController().navigate(R.id.loginFragment)
                     Toast.makeText(context, "Nice", Toast.LENGTH_SHORT).show()
                 } else {
                     //handle error
