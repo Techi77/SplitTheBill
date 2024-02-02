@@ -5,6 +5,7 @@
     <string name="your_profile">твой профиль</string>
     <string name="lets">Давай!</string>
     <string name="I_have_an_account">Аккаунт есть!</string>
+    <string name="your_first_list">твой первый список</string>
 
 
 
@@ -17,4 +18,8 @@
     <string name="sign_up">Sign Up</string>
     <string name="already_registered_sign_in">Already Registered , Sign In !</string>
     <string name="not_registered_yet_sign_up">Not Registered Yet , Sign Up !</string>
+    <string name="list_name">List name</string>
+    <string name="share_500_out_of_7000">Share: 500 (out of 7000)</string>
+    <string name="todo">TODO</string>
+    <string name="_30_12_2222">30.12.2222</string>
 </resources>

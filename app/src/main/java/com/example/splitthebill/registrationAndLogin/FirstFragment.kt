@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.splitthebill.MainActivity
 import com.example.splitthebill.R
 import com.example.splitthebill.databinding.FFirstPageBinding
 
@@ -31,6 +30,10 @@ class FirstFragment: Fragment() {
         binding.registrationBt.setOnClickListener {
             (activity as? MainActivity)?.addFragment(SingUpFragment())
         }*/
+        /*binding.loginBt.setOnClickListener {
+            findNavController().navigate(R.id.loginFragment)
+        }*/
+
         binding.loginBt.setOnClickListener {
             findNavController().navigate(R.id.loginFragment)
         }
