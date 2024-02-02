@@ -42,7 +42,16 @@
     </fragment>
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.example.splitthebill.startPage.fragments.StartFragment"
+        android:name="com.example.splitthebill.startPage.fragments.MainFragment"
         android:label="StartFragment"
-        tools:layout="@layout/f_start"/>
+        tools:layout="@layout/f_main">
+        <action
+            android:id="@+id/action_startFragment_to_createListDialogFragment2"
+            app:destination="@id/createListDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createListDialogFragment"
+        android:name="com.example.splitthebill.startPage.fragments.CreateListDialogFragment"
+        android:label="CreateListDialogFragment"
+        tools:layout="@layout/f_create_list_dialog"/>
 </navigation>

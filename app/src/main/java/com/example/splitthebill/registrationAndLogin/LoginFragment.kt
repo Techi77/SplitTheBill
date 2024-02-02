@@ -11,10 +11,8 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.splitthebill.MainActivity
 import com.example.splitthebill.R
 import com.example.splitthebill.databinding.FLoginBinding
-import com.example.splitthebill.startPage.fragments.StartFragment
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
