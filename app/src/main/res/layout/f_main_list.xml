@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/bg_color">
+
+        <View
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_main"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:title="@string/app_name"
+            android:titleTextColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/emptyListDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="dialogPeopleBg, pizza, titlePeople, subtitlePeople, goPeopleBt, dialogAddBg, smile, titleAdd, subtitleAdd, goAddBt" />
+
+        <View
+            android:id="@+id/dialogPeopleBg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="-24dp"
+            android:layout_marginBottom="-24dp"
+            android:background="@drawable/bg_dialog"
+            app:layout_constraintBottom_toBottomOf="@+id/goPeopleBt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pizza"
+            app:layout_constraintWidth_max="312dp" />
+
+        <ImageView
+            android:id="@+id/pizza"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_pizza"
+            app:layout_constraintBottom_toTopOf="@+id/titlePeople"
+            app:layout_constraintEnd_toEndOf="@+id/dialogPeopleBg"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/dialogPeopleBg"
+            app:layout_constraintTop_toBottomOf="@+id/dialogAddBg"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/titlePeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/shall_we_add"
+            android:textColor="?attr/textColor"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/subtitlePeople"
+            app:layout_constraintEnd_toEndOf="@+id/dialogPeopleBg"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/dialogPeopleBg"
+            app:layout_constraintTop_toBottomOf="@+id/pizza" />
+
+        <TextView
+            android:id="@+id/subtitlePeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/things_you_bought"
+            android:textColor="?attr/textColor"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/goPeopleBt"
+            app:layout_constraintEnd_toEndOf="@+id/dialogPeopleBg"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/dialogPeopleBg"
+            app:layout_constraintTop_toBottomOf="@+id/titlePeople" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/goPeopleBt"
+            style="@style/OutlinedMaterialDialogButton"
+            android:layout_marginTop="10dp"
+            android:text="@string/lets"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/dialogPeopleBg"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/dialogPeopleBg"
+            app:layout_constraintTop_toBottomOf="@+id/subtitlePeople" />
+
+        <View
+            android:id="@+id/dialogAddBg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="-24dp"
+            android:layout_marginBottom="-24dp"
+            android:background="@drawable/bg_dialog"
+            app:layout_constraintBottom_toBottomOf="@+id/goAddBt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/smile"
+            app:layout_constraintWidth_max="312dp" />
+
+        <ImageView
+            android:id="@+id/smile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_smile"
+            app:layout_constraintBottom_toTopOf="@+id/titleAdd"
+            app:layout_constraintEnd_toEndOf="@+id/dialogAddBg"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/dialogAddBg"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/titleAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/shall_we_invite"
+            android:textColor="?attr/textColor"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/subtitleAdd"
+            app:layout_constraintEnd_toEndOf="@+id/dialogAddBg"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="@+id/dialogAddBg"
+            app:layout_constraintTop_toBottomOf="@+id/smile" />
+
+        <TextView
+            android:id="@+id/subtitleAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/more_people"
+            android:textColor="?attr/textColor"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/goAddBt"
+            app:layout_constraintEnd_toEndOf="@+id/dialogAddBg"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/dialogAddBg"
+            app:layout_constraintTop_toBottomOf="@+id/titleAdd" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/goAddBt"
+            style="@style/OutlinedMaterialDialogButton"
+            android:layout_marginTop="10dp"
+            android:text="@string/lets"
+            app:layout_constraintBottom_toTopOf="@+id/pizza"
+            app:layout_constraintEnd_toEndOf="@+id/dialogAddBg"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/dialogAddBg"
+            app:layout_constraintTop_toBottomOf="@+id/subtitleAdd" />
+
+        <TextView
+            android:id="@+id/iOwe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/i_owe"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/theyOweStart"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <View
+            android:id="@+id/iOweView"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/iOweEnd"
+            app:layout_constraintStart_toStartOf="@id/iOweStart"
+            app:layout_constraintTop_toBottomOf="@id/iOwe" />
+
+        <TextView
+            android:id="@+id/iOweAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_5000"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/iOwe"
+            app:layout_constraintStart_toStartOf="@+id/iOwe"
+            app:layout_constraintTop_toBottomOf="@+id/iOwe" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/iOweStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="start"
+            app:constraint_referenced_ids="iOwe, iOweAmount" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/iOweEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="iOwe, iOweAmount" />
+
+        <TextView
+            android:id="@+id/theyOwe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/they_owe"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/totalStart"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/iOweEnd"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <View
+            android:id="@+id/theyOweView"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/theyOweEnd"
+            app:layout_constraintStart_toStartOf="@id/theyOweStart"
+            app:layout_constraintTop_toBottomOf="@id/theyOwe" />
+
+        <TextView
+            android:id="@+id/theyOweAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_5000"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/theyOwe"
+            app:layout_constraintStart_toStartOf="@+id/theyOwe"
+            app:layout_constraintTop_toBottomOf="@+id/theyOwe" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/theyOweStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="start"
+            app:constraint_referenced_ids="theyOwe, theyOweAmount" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/theyOweEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="theyOwe, theyOweAmount" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/theyOwe"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <View
+            android:id="@+id/totalView"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/totalEnd"
+            app:layout_constraintStart_toStartOf="@id/totalStart"
+            app:layout_constraintTop_toBottomOf="@id/total" />
+
+        <TextView
+            android:id="@+id/totalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_5000"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/total"
+            app:layout_constraintStart_toStartOf="@+id/total"
+            app:layout_constraintTop_toBottomOf="@+id/total" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/totalStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="start"
+            app:constraint_referenced_ids="total, totalAmount" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/totalEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="total, totalAmount" />
+
+        <include
+            layout="@layout/v_lists_carousel_item"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="34dp"
+            android:layout_marginHorizontal="33dp"
+            app:layout_constraintBottom_toTopOf="@+id/materialButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iOweAmount" />
+
+        <ImageButton
+            android:id="@+id/arrowLeft"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="26dp"
+            android:backgroundTint="@color/transparent"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintBottom_toBottomOf="@+id/materialButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/materialButton" />
+
+        <ImageButton
+            android:id="@+id/arrowRight"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="26dp"
+            android:backgroundTint="@color/transparent"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintBottom_toBottomOf="@+id/materialButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/materialButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="10dp"
+            android:text="@string/change_list"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            app:cornerRadius="100dp"
+            app:icon="@drawable/ic_edit_list"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/arrowRight"
+            app:layout_constraintStart_toEndOf="@+id/arrowLeft" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

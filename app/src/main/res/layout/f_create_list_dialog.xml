@@ -59,7 +59,7 @@
         android:id="@+id/goBt"
         style="@style/OutlinedMaterialDialogButton"
         android:layout_marginTop="10dp"
-        android:text="@string/lets"
+        android:text="@string/create"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/dialogBg"
         app:layout_constraintHorizontal_bias="0.5"

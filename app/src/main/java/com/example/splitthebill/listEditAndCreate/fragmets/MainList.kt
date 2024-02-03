@@ -1,4 +1,4 @@
-package com.example.splitthebill.startPage.fragments
+package com.example.splitthebill.listEditAndCreate.fragmets
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,25 +7,24 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.splitthebill.R
-import com.example.splitthebill.databinding.FCreateListDialogBinding
+import com.example.splitthebill.databinding.FMainListBinding
 
-class CreateListDialogFragment: Fragment() {
-    private lateinit var binding: FCreateListDialogBinding
+class MainList: Fragment() {
+    private lateinit var binding: FMainListBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FCreateListDialogBinding.inflate(inflater, container, false)
+        binding = FMainListBinding.inflate(inflater, container, false)
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    /*override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.goBt.setOnClickListener {
-            findNavController().navigate(R.id.mainList)
+            findNavController().navigate(R.id.createListDialogFragment)
         }
-    }
-
+    }*/
 }
