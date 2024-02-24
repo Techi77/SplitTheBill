@@ -1,27 +1,29 @@
 <resources>
+
+    <!--Non translatable-->
+    <string name="google" translatable="false">Google</string>
+    <string name="email" translatable="false">E-mail</string>
+    <string name="_30_12_2222" translatable="false">30.12.2222</string>
+    <string name="_5000" translatable="false">5000</string>
+    <string name="line" translatable="false">**************************************************************************************************************************************************************************</string>
+    <string name="line_bottom" translatable="false">-----------------------------------------------------------------------------------------------------------------------------------------------------------------------</string>
+
+    <!--translatable-->
     <string name="app_name">Split the bill</string>
     <string name="shall_we_create">Shall we create</string>
     <string name="your_profile">your profile</string>
     <string name="lets">Let\'s!</string>
     <string name="I_have_an_account">I have an account</string>
     <string name="your_first_list">your first list</string>
-
-
-
     <string name="login">Login</string>
-    <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="registration">Registration</string>
-    <string name="jfioajf">jfioajf</string>
     <string name="retype_password">Retype Password</string>
     <string name="sign_up">Sign Up</string>
     <string name="already_registered_sign_in">Already Registered , Sign In !</string>
     <string name="not_registered_yet_sign_up">Not Registered Yet , Sign Up !</string>
-    <string name="google" translatable="false">Google</string>
     <string name="list_name">List name</string>
     <string name="share_500_out_of_7000">Share: 500 (out of 7000)</string>
-    <string name="todo">TODO</string>
-    <string name="_30_12_2222">30.12.2222</string>
     <string name="let_s_call">Let\'s call?</string>
     <string name="create">Create!</string>
     <string name="shall_we_invite">Shall we invite?</string>
@@ -31,9 +33,9 @@
     <string name="i_owe">I owe</string>
     <string name="they_owe">They owe</string>
     <string name="total">Total</string>
-    <string name="_5000">5000</string>
     <string name="mark">Mark</string>
-    <string name="line">**************************************************************************************************************************************************************************</string>
-    <string name="line_bottom">-----------------------------------------------------------------------------------------------------------------------------------------------------------------------</string>
     <string name="change_list">Change list</string>
+    <string name="create_new_list">Create new list</string>
+    <string name="return_to_previous_list">return to previous list</string>
+    <string name="next_list">Next list</string>
 </resources>
