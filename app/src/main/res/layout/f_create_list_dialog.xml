@@ -3,19 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/transparent">
+    android:background="@color/transparent"
+    android:clipToPadding="false">
 
     <View
         android:id="@+id/dialogBg"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/bg_dialog"
+        android:backgroundTint="?attr/bg_color"
         app:layout_constraintWidth_max="312dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/pizza"
         android:layout_marginTop="-24dp"
         android:layout_marginBottom="-24dp"
+        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/goBt"/>
 
     <ImageView
@@ -24,9 +27,9 @@
         android:layout_height="24dp"
         android:importantForAccessibility="no"
         android:src="@drawable/ic_pizza"
+        android:elevation="10dp"
         app:layout_constraintBottom_toTopOf="@+id/title"
         app:layout_constraintEnd_toEndOf="@+id/dialogBg"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/dialogBg"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
@@ -39,9 +42,9 @@
         android:text="@string/let_s_call"
         android:textColor="?attr/textColor"
         android:textSize="24sp"
+        android:elevation="10dp"
         app:layout_constraintBottom_toTopOf="@+id/nameInput"
         app:layout_constraintEnd_toEndOf="@+id/dialogBg"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/dialogBg"
         app:layout_constraintTop_toBottomOf="@+id/pizza" />
 
@@ -50,6 +53,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:elevation="10dp"
         app:layout_constraintEnd_toEndOf="@+id/dialogBg"
         app:layout_constraintStart_toStartOf="@+id/dialogBg"
         app:layout_constraintTop_toBottomOf="@+id/title"
@@ -60,9 +64,9 @@
         style="@style/OutlinedMaterialDialogButton"
         android:layout_marginTop="10dp"
         android:text="@string/create"
+        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/dialogBg"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/dialogBg"
         app:layout_constraintTop_toBottomOf="@+id/nameInput" />
 
