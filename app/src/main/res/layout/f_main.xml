@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/bg_color">
+    android:background="?attr/bg_color"
+    android:clipToPadding="false">
 
     <View
         android:id="@+id/background"
@@ -23,16 +24,18 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/transparent"
+        android:elevation="4dp"
         android:title="@string/app_name"
         android:titleTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/emptyListDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:elevation="4dp"
         android:visibility="visible"
         app:constraint_referenced_ids="dialogBg, pizza, title, subtitle, goBt" />
 
@@ -40,19 +43,21 @@
         android:id="@+id/dialogBg"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/bg_dialog"
-        app:layout_constraintWidth_max="312dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/pizza"
         android:layout_marginTop="-24dp"
         android:layout_marginBottom="-24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/goBt"/>
+        android:background="@drawable/bg_dialog"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/goBt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pizza"
+        app:layout_constraintWidth_max="312dp" />
 
     <ImageView
         android:id="@+id/pizza"
         android:layout_width="24dp"
         android:layout_height="24dp"
+        android:elevation="4dp"
         android:importantForAccessibility="no"
         android:src="@drawable/ic_pizza"
         app:layout_constraintBottom_toTopOf="@+id/title"
@@ -67,6 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:elevation="4dp"
         android:text="@string/shall_we_create"
         android:textColor="?attr/textColor"
         android:textSize="24sp"
@@ -81,6 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:elevation="4dp"
         android:text="@string/your_first_list"
         android:textColor="?attr/textColor"
         android:textSize="14sp"
@@ -94,6 +101,7 @@
         android:id="@+id/goBt"
         style="@style/OutlinedMaterialDialogButton"
         android:layout_marginTop="10dp"
+        android:elevation="4dp"
         android:text="@string/lets"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/dialogBg"
@@ -104,15 +112,16 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:layout_constraintVertical_bias="0.0"
 
-        android:visibility="gone"
-        android:background="@color/white">
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
@@ -126,8 +135,9 @@
         android:layout_height="56dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:contentDescription="@string/todo"
+        android:elevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
