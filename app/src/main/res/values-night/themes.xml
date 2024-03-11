@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SplitTheBill" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="black_to_white_opacity_60">@color/white_opacity_60</item>
+        <item name="white_to_gray_800">@color/gray_800</item>
+        <item name="borderColor">@color/dialog_border_dark</item>
+        <item name="mainBlue">@color/main_blue_dark</item>
+        <item name="mainBlueInactive">@color/main_blue_dark_opacity_50</item>
+        <item name="editTextColor">@color/editTextColor_dark</item>
+    </style>
+</resources>

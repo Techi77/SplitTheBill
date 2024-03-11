@@ -9,7 +9,7 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/bg_color">
+        android:background="?attr/white_to_gray_800">
 
         <View
             android:id="@+id/background"
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/shall_we_add"
-            android:textColor="?attr/textColor"
+            android:textColor="?attr/black_to_white_opacity_60"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/subtitlePeople"
             app:layout_constraintEnd_toEndOf="@+id/dialogPeopleBg"
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/things_you_bought"
-            android:textColor="?attr/textColor"
+            android:textColor="?attr/black_to_white_opacity_60"
             android:textSize="14sp"
             app:layout_constraintBottom_toTopOf="@+id/goPeopleBt"
             app:layout_constraintEnd_toEndOf="@+id/dialogPeopleBg"
@@ -138,7 +138,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/shall_we_invite"
-            android:textColor="?attr/textColor"
+            android:textColor="?attr/black_to_white_opacity_60"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/subtitleAdd"
             app:layout_constraintEnd_toEndOf="@+id/dialogAddBg"
@@ -152,7 +152,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/more_people"
-            android:textColor="?attr/textColor"
+            android:textColor="?attr/black_to_white_opacity_60"
             android:textSize="14sp"
             app:layout_constraintBottom_toTopOf="@+id/goAddBt"
             app:layout_constraintEnd_toEndOf="@+id/dialogAddBg"
